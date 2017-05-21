@@ -1,0 +1,45 @@
+<!-- Robert Siniscalchi
+Use jQuery click() and append() methods to inserts HTML content
+at the end of <p> and at the end of <ol>.-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wk9 - jQuery - click() & append()</title>
+
+    <!--call ajax library for jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(btnClickP); // add event listener (click) for btn1
+            $("#btn2").click(btnClickOL); // add event listener (click) for btn2
+        });
+
+        function btnClickP() {
+            $("p").append("<b> Appended text</b>");  // append text to paragraphs
+        }
+
+        function btnClickOL() {
+            $("ol").append("<li>Appended item</li>");  // append item to list
+        }
+    </script>
+</head>
+
+<body>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<ol>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+</ol>
+
+<button id="btn1">Append text</button>
+<button id="btn2">Append list items</button>
+
+</body>
+</html>
